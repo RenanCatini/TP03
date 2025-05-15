@@ -64,8 +64,10 @@ static void exibirSaida(unsigned **grafoInt, double **grafoDouble, char *nomeDoL
     //exibirMatriz(grafoInt,tam);    putchar('\n');
     exibirGrafoD(grafoDouble,tam); putchar('\n');
 
-    NoNoInt* caminhos = completeDijkstra(QTD_PERSONAGENS, grafoDouble);
+    /* ------ PARTE CHAMADA DE FUNÇÃO DO RENAN ------- */
+    NoNoInt* caminhos = completeDijkstra(QTD_PERSONAGENS, grafoDouble); // Lista de pilhas com caminhos na ordem correta!
     printNameWay(caminhos, nomes);
+    /* ----------------------------------------------- */
 }
 
 // Gambiarra pra exibir a matriz na saída padrão.
